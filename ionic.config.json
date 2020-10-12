@@ -1,0 +1,7 @@
+{
+  "name": "basketballguide",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
