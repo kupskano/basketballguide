@@ -1,0 +1,40 @@
+ion-content {
+    --background: #fff url('../../assets/ball.jpg') no-repeat center center / cover;
+    ion-card {
+  
+      
+      border-radius: 8px;
+  
+      ion-col {
+        ion-img {
+          position: relative;
+          bottom: 36px;
+          width: 120px;
+        }
+      }
+  
+      .mask {
+        img {
+          width: 240px;
+          position: absolute;
+          bottom: 0px;
+          left: 140px;
+          mask-image: linear-gradient(to top, rgba(0,0,0,.1), rgba(0,0,0,0));
+        }
+      }
+  
+      ion-badge {
+        margin-top: 8px;
+        background: rgba(0,0,0,.08);
+      }
+  
+      ion-card-title {
+        font-weight: 900;
+      }
+  
+      .no {
+        color: rgba(0,0,0,.66);
+        font-weight: bold;
+      }
+    }
+  }

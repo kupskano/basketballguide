@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'modalchoose',
+    loadChildren: () => import('./modalchoose/modalchoose.module').then( m => m.ModalchoosePageModule)
+  },
+  {
+    path: 'guide-details',
+    loadChildren: () => import('./guide-details/guide-details.module').then( m => m.GuideDetailsPageModule)
+  },
+  {
+    path: 'playerposition',
+    loadChildren: () => import('./playerposition/playerposition.module').then( m => m.PlayerpositionPageModule)
+  },
+  {
+    path: 'coach',
+    loadChildren: () => import('./coach/coach.module').then( m => m.CoachPageModule)
+  },
+  {
+    path: 'pointsystem',
+    loadChildren: () => import('./pointsystem/pointsystem.module').then( m => m.PointsystemPageModule)
+  },
 ];
 
 @NgModule({
