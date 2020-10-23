@@ -1,0 +1,306 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["home-home-module"],{
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.page.html":
+/*!***************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.page.html ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-no-border\">\n  <ion-toolbar class=\"main-toolbar\">\n    <ion-buttons slot=\"end\">\n      <ion-button >\n        <ion-icon name=\"help-circle-outline\"></ion-icon>\n      </ion-button>\n      <ion-button (click)=\"presentPopover($event)\">\n        <ion-icon name=\"menu-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>\n      Cricket Guide\n    </ion-title>\n    \n  </ion-toolbar>\n\n  <!-- <ion-toolbar>\n    <ion-searchbar class=\"ion-no-padding ion-padding-top\" placeholder=\"Search.\" (ionInput)=\"filterProductData($event)\"></ion-searchbar>\n  </ion-toolbar> -->\n  \n \n</ion-header>\n\n\n<ion-content>\n  <br>\n  <br>\n  <div style=\"padding-left: 1rem;\">\n   <b>\n    Explore crickets fundamentals\n   </b>\n  </div>\n\n  <ion-card class=\"main-card\">\n    \n    <ion-card-content>\n      <ion-grid>\n        <ion-row>\n          <ion-col size=\"4\" *ngFor=\"let guideline of guidelines\" (click)=\"getDate(guideline)\">\n            <ion-avatar>\n              <img src=\"{{guideline.urlImage}}\">\n            </ion-avatar>\n            <br>\n            <div class=\"ion-text-center\">\n              <ion-label> {{guideline.title}}</ion-label>\n            </div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      \n    </ion-card-content>\n  </ion-card>\n\n  <br>\n  <div style=\"padding-left: 1rem;\">\n    <b>\n    Important Aspects for Playing Cricket\n    </b>\n   </div>\n\n\n  <ion-grid>\n    <ion-row>\n      <ion-col size=\"6\" *ngFor=\"let aspect of aspects\">\n        <ion-card class=\"card-aspect\">\n          <ion-card-content>\n            <ion-chip>\n              <ion-avatar>\n                <img src=\"{{aspect.icon}}\">\n              </ion-avatar>\n              <ion-label>{{aspect.title}}</ion-label>\n            </ion-chip>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/popover/popover.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/popover/popover.component.html ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-list>\n  <ion-item>\n    <ion-label>Settings</ion-label>\n  </ion-item>\n  <ion-item>\n    <ion-label>Settings</ion-label>\n  </ion-item>\n  <ion-item>\n    <ion-label>Settings</ion-label>\n  </ion-item>\n</ion-list>");
+
+/***/ }),
+
+/***/ "./src/app/home/home-routing.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/home/home-routing.module.ts ***!
+  \*********************************************/
+/*! exports provided: HomePageRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageRoutingModule", function() { return HomePageRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home.page */ "./src/app/home/home.page.ts");
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _home_page__WEBPACK_IMPORTED_MODULE_3__["HomePage"],
+    }
+];
+let HomePageRoutingModule = class HomePageRoutingModule {
+};
+HomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    })
+], HomePageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/home/home.module.ts":
+/*!*************************************!*\
+  !*** ./src/app/home/home.module.ts ***!
+  \*************************************/
+/*! exports provided: HomePageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home.page */ "./src/app/home/home.page.ts");
+/* harmony import */ var _home_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home-routing.module */ "./src/app/home/home-routing.module.ts");
+
+
+
+
+
+
+
+let HomePageModule = class HomePageModule {
+};
+HomePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicModule"],
+            _home_routing_module__WEBPACK_IMPORTED_MODULE_6__["HomePageRoutingModule"]
+        ],
+        declarations: [_home_page__WEBPACK_IMPORTED_MODULE_5__["HomePage"]]
+    })
+], HomePageModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/home/home.page.scss":
+/*!*************************************!*\
+  !*** ./src/app/home/home.page.scss ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".main-toolbar {\n  border-bottom-right-radius: 20px;\n  border-bottom-left-radius: 20px;\n  padding-bottom: 90px;\n  --background: #84c7f5;\n  color: #ffffff;\n}\n\nion-content {\n  --background: #ffffff;\n}\n\n.main-card {\n  border-radius: 20px;\n}\n\nion-label {\n  text-align: center;\n}\n\n.card-aspect {\n  --background: #84c7f5;\n}\n\nion-chip {\n  --background: #ffffff;\n}\n\nion-searchbar {\n  --background: rgba(0,0,0,.04);\n  --box-shadow: none;\n  --border-radius: 6px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQTtFQUNFLGdDQUFBO0VBQ0EsK0JBQUE7RUFDQSxvQkFBQTtFQUNBLHFCQUFBO0VBQ0EsY0FBQTtBQUZGOztBQUlBO0VBQ0UscUJBQUE7QUFERjs7QUFLQTtFQUNFLG1CQUFBO0FBRkY7O0FBTUE7RUFDRSxrQkFBQTtBQUhGOztBQU1BO0VBQ0UscUJBQUE7QUFIRjs7QUFNQTtFQUNFLHFCQUFBO0FBSEY7O0FBS0E7RUFDRSw2QkFBQTtFQUNBLGtCQUFBO0VBQ0Esb0JBQUE7QUFGRiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpb24taGVhZGVyIHtcbi8vICAgcGFkZGluZy10b3A6IDIwcHg7XG4vLyB9XG4ubWFpbi10b29sYmFyIHtcbiAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDIwcHg7XG4gIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDIwcHg7XG4gIHBhZGRpbmctYm90dG9tOiA5MHB4O1xuICAtLWJhY2tncm91bmQ6ICM4NGM3ZjU7XG4gIGNvbG9yOiAjZmZmZmZmO1xufVxuaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6ICNmZmZmZmY7XG4gIFxufVxuXG4ubWFpbi1jYXJkIHtcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcbiAgLy8gLS1iYWNrZ3JvdW5kOiAjZTBkMDQ0O1xufVxuXG5pb24tbGFiZWwge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5jYXJkLWFzcGVjdCB7XG4gIC0tYmFja2dyb3VuZDogIzg0YzdmNTtcbn1cblxuaW9uLWNoaXAge1xuICAtLWJhY2tncm91bmQ6ICNmZmZmZmY7XG59XG5pb24tc2VhcmNoYmFyIHtcbiAgLS1iYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLC4wNCk7XG4gIC0tYm94LXNoYWRvdzogbm9uZTtcbiAgLS1ib3JkZXItcmFkaXVzOiA2cHg7XG59XG5cblxuXG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/home/home.page.ts":
+/*!***********************************!*\
+  !*** ./src/app/home/home.page.ts ***!
+  \***********************************/
+/*! exports provided: HomePage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePage", function() { return HomePage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _popover_popover_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../popover/popover.component */ "./src/app/popover/popover.component.ts");
+
+
+
+
+
+let HomePage = class HomePage {
+    constructor(popoverController, router) {
+        this.popoverController = popoverController;
+        this.router = router;
+        this.guidelines = [
+            {
+                "id": 1,
+                "title": "Bat",
+                "description": "sample description",
+                "urlImage": "assets/icon/favicon.png"
+            },
+            {
+                "id": 2,
+                "title": "Ball",
+                "description": "sample description",
+                "urlImage": "assets/icon/favicon.png"
+            },
+            {
+                "id": 3,
+                "title": "Stumps",
+                "description": "sample description",
+                "urlImage": "assets/icon/favicon.png"
+            },
+            {
+                "id": 4,
+                "title": "Ground",
+                "description": "sample description",
+                "urlImage": "assets/icon/favicon.png"
+            },
+            {
+                "id": 5,
+                "title": "Pitch",
+                "description": "sample description",
+                "urlImage": "assets/icon/favicon.png"
+            },
+            {
+                "id": 6,
+                "title": "Rules",
+                "description": "sample description",
+                "urlImage": "assets/icon/favicon.png"
+            }
+        ];
+        this.aspects = [
+            {
+                "id": 1,
+                "title": "Teams",
+                "description": "sample description",
+                "icon": "assets/icon/favicon.png"
+            },
+            {
+                "id": 2,
+                "title": "Batting",
+                "description": "sample description",
+                "icon": "assets/icon/favicon.png"
+            },
+            {
+                "id": 3,
+                "title": "Bowling",
+                "description": "sample description",
+                "icon": "assets/icon/favicon.png"
+            },
+            {
+                "id": 4,
+                "title": "Fielding",
+                "description": "sample description",
+                "icon": "assets/icon/favicon.png"
+            },
+            {
+                "id": 5,
+                "title": "Umpire",
+                "description": "sample description",
+                "icon": "assets/icon/favicon.png"
+            },
+            {
+                "id": 6,
+                "title": "Captain",
+                "description": "sample description",
+                "icon": "assets/icon/favicon.png"
+            }
+        ];
+    }
+    presentPopover(ev) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const popover = yield this.popoverController.create({
+                component: _popover_popover_component__WEBPACK_IMPORTED_MODULE_4__["PopoverComponent"],
+                event: ev,
+                translucent: true,
+                cssClass: 'my-custom-class'
+            });
+            return yield popover.present();
+        });
+    }
+    getDate(guideline) {
+        this.router.navigate(['/guide-details', {
+                'id': guideline.id,
+                'title': guideline.title,
+                'description': guideline.description,
+                'urlImage': guideline.urlImage
+            }
+        ]);
+        // alert(guideline.id);
+        // console.log(JSON.stringify(guideline))
+    }
+};
+HomePage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["PopoverController"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+HomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-home',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./home.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.page.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")).default]
+    })
+], HomePage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/popover/popover.component.scss":
+/*!************************************************!*\
+  !*** ./src/app/popover/popover.component.scss ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BvcG92ZXIvcG9wb3Zlci5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/popover/popover.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/popover/popover.component.ts ***!
+  \**********************************************/
+/*! exports provided: PopoverComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PopoverComponent", function() { return PopoverComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+let PopoverComponent = class PopoverComponent {
+    constructor() { }
+    ngOnInit() { }
+};
+PopoverComponent.ctorParameters = () => [];
+PopoverComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-popover',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./popover.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/popover/popover.component.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./popover.component.scss */ "./src/app/popover/popover.component.scss")).default]
+    })
+], PopoverComponent);
+
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=home-home-module.js.map
